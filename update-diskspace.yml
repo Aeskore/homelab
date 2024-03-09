@@ -16,8 +16,8 @@
         url: "https://discord.com/api/webhooks/1216074834040066058/sjiI88ou38x5mRxkNOu_GLmITB6Rc8JgafVeYqXqTRafYtKG8x-AEixMTFtc2yzyMQ69"
         method: POST
         body_format: json
-        body: '{"content": "Disk space on {{ inventory_hostname }} is above 80%!"}'
+        body: '{"content": "Disk space on {{ inventory_hostname }} is above 40%!"}'
         headers:
           Content-Type: application/json
         status_code: 204
-      when: disk_usage.stdout[:-1]|int > 80
+      when: disk_usage.stdout[:-1]|int > 40
